@@ -1,76 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Book Reviews</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="style.css">
+  
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+* {
+  box-sizing: border-box;
 }
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+*{ 
+    margin:0;
+    padding:0;
+    background: url('photos/background.jpg');
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar ul {
+    list-style: None;
+    background-color: #A9A9A9;
+    top: 0%;
+    margin:0;
+    padding:0;
+    text-align: center;
+    opacity: transparent;
+
+}
+.navbar li {
+    display:inline-block;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    width: 120px;
+    display: block;
+    padding: 25px 20px;
+    font-size: 12px;
+}
+.navbar a:hover{
+    background: black;
+
+}
+.searchb{
+    margin-top: 22px;
+    float:right;
+    margin-right:120px;
+}
+.navbar ul img{
+    width:80px;
+    height:70px;
+    border-radius:100%;
+    align-items: center;
+    float: left;
+}
+
 </style>
 </head>
-<body class="w3-light-grey">
-    
-    <div class="navbar">
-          
-        <ul>
-            <img src='logo.jpg'>
-            <li><a href="#HOME">HOME </a></li>
-            <li><a href="#BOOKS">BOOKS </a></li>
-            <li><a href="#CONTACT US">CONTACT US </a></li>
-            <li><a href="#OUR TEAM">OUR TEAM</a></li>
-            <li class="searchb"><input type="text" class="box1" placeholder="search anything"/>
-            <i class="fa fa-search" aria-hidden="true"></i></li>
-        </ul>
+<body>
+  <div class="navbar">    
+    <ul>
+        <li><a href="home.html">HOME </a></li>
+        <li><a href="#BOOKS">BOOKS </a></li>
+        <li><a href="#CONTACT US">CONTACT US </a></li>
+        <li><a href="#OUR TEAM">OUR TEAM</a></li>
+    </ul>
+  </div>
+
+<header class="w3 w3-center w3-padding-32"> 
+  <h1><b>Review Lit</b></h1>
+</header>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
+  </div>
+</div>
 
-    <header class="w3 w3-center w3-padding-32"> 
-        <h1><b>Book Reviews</b></h1>
-        <p>Welcome Book Reviews where users are freely able to post Reviews about books. </p>
-      </header>
-    
-      <div class="w3-row">
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+</footer>
 
-        <!-- Book entries -->
-        <div class="w3-col l8 s12">
-          <!-- Book entry -->
-            <p style= "text-align:center;"><img src="images/adventures-of-huckleberry-finn-mark-twain.jpg" alt="huckleberryfinn" style="width: 50%">
-            </p>
-            <div class="w3-card-4 w3-margin w3-white">
-            <div class="w3-panel">
-              <h3><b><p style= "text-align:center;">The Adventures of Huckleberry Finn</p></b></h3>
-              <h5><p style= "text-align:center;">By Mark Twain <span class="w3-opacity"> Published 1884</span></p></h5>
-            </div>
-            <div class="w3-container">
-              <p style= "text-align:center;"> The Adventures of Huckleberry Finn is a novel telling the story of a boy and his escapefrom his alcoholic and abusive father which turns out to be an adventure down the Mississippi River.
-              </p>
-              <form  method="post">
-                <div class="form-group">
-                  <input type="text" placeholder="enter comments" name="review" class="form-control" required>
-                </div>
-            
-                <div class="right">
-                  <button type="submit" class="btn btn-success">Submit Review</button>
-                </div>
-              </form>
-              <div class="alert alert-primary" id="alert">
-                <div>
-                  by <strong>{{review.username}}</strong>
-                </div>
-                <div>
-                  <strong>Review : </strong>{{review.text}}
-                </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </div>
-        <hr>
+</body>
+</html>

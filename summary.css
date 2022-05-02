@@ -3,15 +3,16 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: lightblue;
 	font-family: 'Open Sans', sans-serif;
 }
+
 h1{
 	animation-timing-function: linear;
-	text-shadow: #aaa;
 	text-align: center;
 	text-size-adjust: 40px;
+	background-color: white;
 }
+
 #container-books{
 	position: absolute;
 	bottom: 0px 18px;
