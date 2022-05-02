@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="style.css">
+  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+*{ 
+    margin:0;
+    padding:0;
+    background: url('photos/background.jpg');
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar ul {
+    list-style: None;
+    background-color: #A9A9A9;
+    top: 0%;
+    margin:0;
+    padding:0;
+    text-align: center;
+    opacity: transparent;
+
+}
+.navbar li {
+    display:inline-block;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    width: 120px;
+    display: block;
+    padding: 25px 20px;
+    font-size: 12px;
+}
+.navbar a:hover{
+    background: black;
+
+}
+.searchb{
+    margin-top: 22px;
+    float:right;
+    margin-right:120px;
+}
+.navbar ul img{
+    width:80px;
+    height:70px;
+    border-radius:100%;
+    align-items: center;
+    float: left;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">    
+    <ul>
+        <li><a href="home.html">HOME </a></li>
+        <li><a href="summary.html">BOOKS </a></li>
+        <li><a href="signup.html">Sign up </a></li>
+        <li><a href="ourteam.html">OUR TEAM</a></li>
+    </ul>
+  </div>
+
+<header class="w3 w3-center w3-padding-32"> 
+  <h1><b>Review Lit</b></h1>
+</header>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>The Yellow Wallpaper</h2>
+      <h5>Published 1892</h5>
+      <div class="fakeimg" style="height:200px;"><img src="images/the-yellow-wallpaper-charlotte-perkins-gilman.jpg" height="150px" width="200px">></div>
+      <p>Charlotte Perkins Gilman</p>
+      <p>The Yellow Wallpaper is a short story which gives a look into the mind of a woman who is suffering from post-partum depression. </p>
+    </div>
+  </div>
+</div>
+
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+</footer>
+
+</body>
+</html>
