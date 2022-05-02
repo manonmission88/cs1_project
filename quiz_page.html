@@ -38,16 +38,40 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       </header>
     
       <div class="w3-row">
-
-    <form method="post" action="/Tests/Post/">   
-        <fieldset>    
-            <legend>What type of novel would you like to read?</legend>       
-            <input type="checkbox" name="Romance" value="">Romance<br>  
-            <input type="checkbox" name="Children's" value="Dogs">Children's<br>    
-            <input type="checkbox" name="Adventure" value="Birds">Adventure<br>       
-            <input type="submit" value="Submit now" /> 
-        </fieldset> 
-    </form>
-    <body><h3> A book you may enjoy is </h3>
-    {{ x }}
+        <body>
+            <table id="bookrecomendation">
+          <tr>
+            <td>
+                <p>What type of novel would you like to read?</p>
+              <label for="Short Story">
+                <input type="checkbox" name="ShortStory" id = "ShortStory" value="False"> Short Story <br>  
+              </label>
+              <label for="Childrens">
+                <input type="checkbox" name="Childrens" id = "Childrens" value="False">Childrens<br>  
+              </label>
+              <label for="Womens">
+                <input type="checkbox" name="Womens" id = "Womens" value="False">Womens<br>         
+              </label>
+            </td>
+          </tr>
+        </table>
+        <h3> A book you may enjoy is </h3>
+        <script type='text/javascript'>
+            var Checked = function(id){
+                 var c = document.getElementById(id);
+                 return (c && c.checked);
+            }
+            var Check = function() {
+                 var ShortStory = Checked("ShortStory");
+                 var Childrens = Checked("Childrens");
+                 var Adventure = Checked("Adventure")
+                 if (ShortStory) return "The Yellow Wallpaper, The Merchant of Venice, or The Celebrated Jumping Frog of Calveras County";
+                 else if (Childrens) return "The Adventures of Huckleberry Finn, The Wonderful Wizard of Oz, or The Adventures of Pinochio";
+                 else if (Adventure) return "Little Woman, Pride and Prejudice, or Sense and Sensibility"
+                 return "none";
+            }
+            window.onclick = function(){ document.write(Check()); }
+              </script>
+            </body>
+            </html>
     </body>
